@@ -1,2 +1,9 @@
 #!/usr/bin/env bash
 
+#create a new directory and enter it
+function md() {
+    mkdir -p "$@" && "$@"
+
+}
+
+function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $*; }
