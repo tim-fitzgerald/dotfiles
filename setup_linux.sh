@@ -22,7 +22,7 @@ pip install awscli --upgrade --user
 #Install Golang
 wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.10.3.linux-amd64.tar.gz
-mkdir -p ~/go/{src, bin, pkg}
+mkdir -p ~/go/{src,bin,pkg}
 
 echo "export PATH=$PATH:/usr/local/go/bin" >> .bash_profile
 echo "export PATH=$PATH:$(go env GOPATH)/bin" >> .bash_profile
