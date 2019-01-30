@@ -23,3 +23,7 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias chmox='chmod +x'
 
 alias where='which'
+
+alias gs='git status'
+
+alias gamc='gcloud alpha cloud-shell ssh'
