@@ -20,5 +20,7 @@ fi;
 brew install git
 brew install git-lfs
 brew install imagemagick --with-webp
+brew install fzf
+brew install python3
 
 brew cleanup

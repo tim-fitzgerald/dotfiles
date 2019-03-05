@@ -1,13 +1,17 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-for file in ~/.{aliases,functions,extra,secure}; do
+for file in ~/.{path,aliases,functions,extra,secure}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/tim/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -97,3 +101,9 @@ fi
 
 alias ls="command ls -la ${colorflag}"
 alias gam="/Users/timfitzgerald/bin/gam/gam"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/timfitzgerald/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/completion.zsh.inc'; fi

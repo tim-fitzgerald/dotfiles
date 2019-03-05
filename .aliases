@@ -26,3 +26,9 @@ alias where='which'
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias gs='git status'
+
+alias gamc='gcloud alpha cloud-shell ssh'
+
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
