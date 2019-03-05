@@ -23,3 +23,6 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias chmox='chmod +x'
 
 alias where='which'
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
