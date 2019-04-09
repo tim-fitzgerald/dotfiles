@@ -13,7 +13,6 @@ alias l="ls -laF ${colorflag}"
 
 alias c="clear"
 
-alias gam="/Users/timfitzgerald/bin/gam/gam"
 alias network="ping 8.8.8.8"
 
 alias spause="spotify pause"
@@ -26,6 +25,7 @@ alias where='which'
 
 alias gs='git status'
 
+alias gam="~/bin/gamadv-x/gam" 
 alias gamc='gcloud alpha cloud-shell ssh'
 
 alias preview="fzf --preview 'bat --color \"always\" {}'"
