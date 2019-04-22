@@ -105,7 +105,6 @@ else # macOS `ls`
 fi
 
 alias ls="command ls -la ${colorflag}"
-alias gam="/Users/timfitzgerald/bin/gam/gam"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc'; fi
