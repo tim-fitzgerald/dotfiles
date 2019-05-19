@@ -6,9 +6,14 @@ for file in ~/.{path,aliases,functions,extra,secure}; do
 done;
 unset file;
 
+eval "$(rbenv init -)"
+
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
+export PATH=~/.local/bin:$PATH
+export PATH=~/Library/Python/3.6/bin:$PATH
+export PATH=/usr/local/bin/Cellar/python/3.7.2_2:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -100,10 +105,15 @@ else # macOS `ls`
 fi
 
 alias ls="command ls -la ${colorflag}"
-alias gam="/Users/timfitzgerald/bin/gam/gam"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/timfitzgerald/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/completion.zsh.inc'; fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

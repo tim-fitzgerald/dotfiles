@@ -43,6 +43,10 @@ fh() {
   eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
 
+pkgsign(){
+	productsign --sign "Developer ID Installer: Tim Fitzgerald (3289N5S57Z)" $1 $1.signed
+}
+
 zle -N fh
 
 bindkey '^r' fh
