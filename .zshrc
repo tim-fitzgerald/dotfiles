@@ -77,7 +77,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  aws
   copyfile
   dirhistory
   extract
@@ -105,15 +104,19 @@ else # macOS `ls`
 fi
 
 alias ls="command ls -la ${colorflag}"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/timfitzgerald/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/completion.zsh.inc'; fi
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/timfitz/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/timfitz/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/timfitz/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/timfitz/google-cloud-sdk/completion.zsh.inc'; fi
+
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
