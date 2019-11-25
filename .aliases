@@ -35,5 +35,6 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 alias wtfp="wtf --config=~/.config/wtf/config_portrait.yml"
 
-alias vim="nvim"
+alias vim="nvim -S ~/.vimrc"
 
+alias tmux="tmux -u"
