@@ -23,6 +23,8 @@ alias chmox='chmod +x'
 
 alias where='which'
 
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 alias gs='git status'
 
 alias gam="~/bin/gamadv-xtd3/gam" 
@@ -33,7 +35,7 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 alias wtfp="wtfutil --config=~/.config/wtf/config_portrait.yml"
 
-alias vim="nvim"
+alias vim="nvim -S ~/.vimrc"
 
 alias munki_invalidate="aws cloudfront create-invalidation --distribution-id E2TR5CG2YMQKLH --paths '/*' --region ca-central-1 --profile Clio_Saml_Senior_Sysadmin"
 
@@ -43,3 +45,4 @@ alias master='git checkout master'
 alias black='python3 -m black'
 
 alias 1pw='eval $(op signin clio)'
+alias tmux="tmux -u"
