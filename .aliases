@@ -25,13 +25,21 @@ alias where='which'
 
 alias gs='git status'
 
-alias gam="~/bin/gamadv-x/gam" 
+alias gam="~/bin/gamadv-xtd3/gam" 
 alias gamc='gcloud alpha cloud-shell ssh'
 
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
-alias wtfp="wtf --config=~/.config/wtf/config_portrait.yml"
+alias wtfp="wtfutil --config=~/.config/wtf/config_portrait.yml"
 
 alias vim="nvim"
 
+alias munki_invalidate="aws cloudfront create-invalidation --distribution-id E2TR5CG2YMQKLH --paths '/*' --region ca-central-1 --profile Clio_Saml_Senior_Sysadmin"
+
+alias hydra_apply='docker-compose run --rm app bundle exec rake hydra:cli APPLY=true'
+
+alias master='git checkout master'
+alias black='python3 -m black'
+
+alias 1pw='eval $(op signin clio)'
