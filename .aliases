@@ -7,42 +7,27 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
-alias ls="command ls -la ${colorflag}"
-alias l="ls -laF ${colorflag}"
-
-
+alias 1pw='eval $(op signin clio)'
+alias awsp="aws_profiles_2"
+alias black='python3 -m black'
 alias c="clear"
-
-alias network="ping 8.8.8.8"
-
-alias spause="spotify pause"
-
-alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
-
+alias cdh="cd ~"
 alias chmox='chmod +x'
-
-alias where='which'
-
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-alias gs='git status'
-
+alias gam="/Users/timfitzgerald/bin/gamadv-xtd3/gam"
 alias gam="~/bin/gamadv-xtd3/gam" 
 alias gamc='gcloud alpha cloud-shell ssh'
-
-alias preview="fzf --preview 'bat --color \"always\" {}'"
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
-
-alias wtfp="wtfutil --config=~/.config/wtf/config_portrait.yml"
-
-alias vim="nvim -S ~/.vimrc"
-
-alias munki_invalidate="aws cloudfront create-invalidation --distribution-id E2TR5CG2YMQKLH --paths '/*' --region ca-central-1 --profile Clio_Saml_Senior_Sysadmin"
-
+alias gs='git status'
 alias hydra_apply='docker-compose run --rm app bundle exec rake hydra:cli APPLY=true'
-
+alias l="ls -laF ${colorflag}"
+alias ls="command ls -la ${colorflag}"
+alias main='git checkout main'
 alias master='git checkout master'
-alias black='python3 -m black'
-
-alias 1pw='eval $(op signin clio)'
+alias munki_invalidate="aws cloudfront create-invalidation --distribution-id E2TR5CG2YMQKLH --paths '/*' --region ca-central-1 --profile Clio_Saml_Senior_Sysadmin"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias network="ping 8.8.8.8"
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias spause="spotify pause"
 alias tmux="tmux -u"
+alias where='which'
+alias wtfp="wtfutil --config=~/.config/wtf/config_portrait.yml"
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"

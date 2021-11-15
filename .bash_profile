@@ -15,10 +15,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 
-
-
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/timfitz/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -36,3 +32,5 @@ unset __conda_setup
 
 
 alias gam="/Users/timfitz/bin/gamadv-xtd3/gam"
+
+alias gam="/Users/timfitzgerald/bin/gamadv-xtd3/gam"

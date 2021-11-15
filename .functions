@@ -35,6 +35,30 @@ pkgsign(){
 	productsign --sign "Developer ID Installer: Tim Fitzgerald (3289N5S57Z)" $1 $1.signed
 }
 
+aws_profiles() {
+	export AWS_PROFILE="$(cat ~/.aws/config | fzf -f [ | sed 's/[][]//g' | sed 's/profile //g'| fzf)"
+}
+
+aws_profiles_2() {
+	profiles_array=()
+	while read line; do
+		if [[ $line == "["* ]]; then
+			str_line=$(sed 's/[][]//g' <<< $line);
+			str_line=$(sed 's/profile //g' <<< $str_line);
+			profiles_array+=("$str_line"); 
+		fi
+	done < ~/.aws/credentials
+
+	while read line; do
+		if [[ $line == "["* ]]; then
+			str_line=$(sed 's/[][]//g' <<< $line);
+			str_line=$(sed 's/profile //g' <<< $str_line);
+			profiles_array+=("$str_line");
+		fi
+	done < ~/.aws/config
+	export AWS_PROFILE="$(printf "%s\n" "${profiles_array[@]}" | fzf)"
+}
+
 zle -N fh
 
 bindkey '^r' fh
