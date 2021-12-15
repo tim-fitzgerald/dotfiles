@@ -50,10 +50,8 @@ let g:terraform_align=1
 let g:terraform_fold_sections=1
 let g:terraform_fmt_on_save=1
 
-if !has('nvim')
-	set ttymouse=xterm2
-	set mouse=a
-endif
+set ttymouse=xterm2
+set mouse=a
 
 if &term =~ '256Color'
 	set t_tut=

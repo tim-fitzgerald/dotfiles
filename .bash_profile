@@ -34,3 +34,6 @@ unset __conda_setup
 alias gam="/Users/timfitz/bin/gamadv-xtd3/gam"
 
 alias gam="/Users/timfitzgerald/bin/gamadv-xtd3/gam"
+. "$HOME/.cargo/env"
+
+alias gam="/Users/timfitzgerald1/bin/gamadv-xtd3/gam"

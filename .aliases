@@ -28,6 +28,7 @@ alias network="ping 8.8.8.8"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias spause="spotify pause"
 alias tmux="tmux -u"
+alias vim="nvim"
 alias where='which'
 alias wtfp="wtfutil --config=~/.config/wtf/config_portrait.yml"
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
