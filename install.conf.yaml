@@ -1,10 +1,10 @@
+- defaults:
+    link:
+      relink: true
+
 - link:
-  ~/.zshrc:
-    force: true
-  ~/.tmux.conf:
-    force: true
-  ~/.vimrc:
-    force: true
-  ~/.aliases:
-    force: true
-  ~/.functions: true
+    ~/.zshrc:
+    ~/.tmux.conf:
+    ~/.vimrc:
+    ~/.aliases:
+    ~/.functions: 
