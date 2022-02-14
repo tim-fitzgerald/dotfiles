@@ -11,7 +11,7 @@ hyper = {"cmd", "alt", "ctrl", "shift"}
 hs.application.enableSpotlightForNameSearches(true)
 
 --- Define default apps 
-local defaultApps = {"iTerm2", "Firefox", "Obsidian", "Code", "Slack", "Spotify"}
+local defaultApps = {"iTerm", "Firefox", "Obsidian", "Visual Studio Code", "Slack", "Spotify"}
 
 function launchApps()
   for _, app in pairs(defaultApps) do 
