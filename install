@@ -15,7 +15,6 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
 if [[ "${CODESPACES:-}" == 'true' ]]; then
-  sudo apt update
-  sudo apt install neovim tmux 
+  DEBIAN_FRONTNED=noninteractive sudo apt update -yq
+  DEBIAN_FRONTNED=noninteractive sudo apt install neovim tmux -yq
 fi
-
