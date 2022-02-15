@@ -3,11 +3,16 @@
       relink: true
 
 - shell:
-  - chsh -s $(which zsh)
+  - sudo chsh -s $(which zsh) $(whoami)
 
 - link:
     ~/.zshrc:
+      force: true
     ~/.tmux.conf:
+      force: true
     ~/.vimrc:
+      force: true
     ~/.aliases:
-    ~/.functions: 
+      force: true
+    ~/.functions:
+      force: true
