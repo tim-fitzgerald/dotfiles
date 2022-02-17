@@ -16,3 +16,11 @@
       force: true
     ~/.functions:
       force: true
+    ~/.oh-my-zsh/custom/macosx.zsh:
+      if: '[ `uname` = Darwin ]'
+      path: oh-my-zsh/custom/macosx.zsh
+      force: true
+    ~/.oh-my-zsh/custom/codespaces.zsh:
+      if: '[ "${CODESPACES}" = true ]'
+      path: oh-my-zsh/custom/codespaces.zsh
+      force: true
