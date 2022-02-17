@@ -27,3 +27,4 @@
     ~/.config/nvim/init.vim:
       force: true
       path: config/nvim/init.vim
+      create: true
