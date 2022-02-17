@@ -24,3 +24,6 @@
       if: '[ "${CODESPACES}" = true ]'
       path: oh-my-zsh/custom/codespaces.zsh
       force: true
+    ~/.config/nvim/init.vim:
+      force: true
+      path: .config/nvim/init.vim
