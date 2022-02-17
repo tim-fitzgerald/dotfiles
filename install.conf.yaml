@@ -26,4 +26,4 @@
       force: true
     ~/.config/nvim/init.vim:
       force: true
-      path: .config/nvim/init.vim
+      path: config/nvim/init.vim
