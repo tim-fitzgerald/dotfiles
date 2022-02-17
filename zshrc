@@ -27,7 +27,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-for file in ~/.{path,aliases,functions,extra,secure}; do
+for file in ~/.{path,aliases,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
