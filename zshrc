@@ -10,11 +10,6 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
 export PATH=~/.local/bin:$PATH
 export PATH="$HOME/.rbenv/shims:$PATH"
 
-for file in ~/.{path,aliases,functions,extra,secure}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
@@ -31,6 +26,11 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+for file in ~/.{path,aliases,functions,extra,secure}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
 export EDITOR='nvim'
 export LC_ALL='C'
