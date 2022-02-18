@@ -19,5 +19,5 @@ if [[ "${CODESPACES:-}" == 'true' ]]; then
   DEBIAN_FRONTNED=noninteractive sudo apt install neovim tmux -yq
 fi
 
- git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
- vim +PluginInstall +qall
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
