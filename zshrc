@@ -30,6 +30,7 @@ source $ZSH/oh-my-zsh.sh
 ### Because we use a provided theme we need to override prompt directly here rather than the specific
 ### .zsh files per platform.
 if [[ "${CODESPACES}" = true ]]; then
+  autoload -Uz vcs_info
   export PROMPT='(%1d):${vcs_info_msg_0_} %{$fg[blue]%}$> %{$reset_color%}'
   export RPROMPT=''
 fi
