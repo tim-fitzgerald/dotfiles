@@ -1,5 +1,4 @@
-Compiled from elements of:
+### My Dotfiles
+Intended to work for local development and in Github Codespaces. 
 
-https://github.com/paulirish/dotfiles 
-
-https://github.com/mathiasbynens/dotfiles/
+Installation managed by [dotbot](https://github.com/anishathalye/dotbot). 
