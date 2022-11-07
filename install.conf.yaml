@@ -10,8 +10,6 @@
       force: true
     ~/.tmux.conf:
       force: true
-    ~/.vimrc:
-      force: true
     ~/.aliases:
       force: true
     ~/.functions:
@@ -27,4 +25,8 @@
     ~/.config/nvim/init.vim:
       force: true
       path: config/nvim/init.vim
+      create: true
+    ~/.config/nvim/init.lua:
+      force: true
+      path: config/nvim/init.lua
       create: true

@@ -69,3 +69,7 @@ if type rg &> /dev/null; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias gam="/Users/timfitzgerald1/bin/gamadv-xtd3/gam"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
