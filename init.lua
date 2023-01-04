@@ -11,7 +11,7 @@ hyper = {"cmd", "alt", "ctrl", "shift"}
 hs.application.enableSpotlightForNameSearches(true)
 
 --- Define default apps 
-local defaultApps = {"iTerm", "Firefox", "Obsidian", "Visual Studio Code", "Slack", "Spotify"}
+local defaultApps = {"iTerm", "Firefox", "Obsidian", "Visual Studio Code", "Slack", "Music"}
 
 function launchApps()
   for _, app in pairs(defaultApps) do 
@@ -38,7 +38,7 @@ function layoutWindows()
     {"Obsidian", nil, primary_screen, hs.geometry.rect(0, 0, 0.333, 1), nil, nil},
     {"Firefox", nil, primary_screen, hs.geometry.rect(0.333,0,0.333, 1), nil, nil},
     {"Code", nil, primary_screen, hs.geometry.rect(0.666, 0, 0.333, 1), nil, nil},
-    {"Slack", nil, ipad, hs.layout.maximized, nil, nil},
+    {"Music", nil, ipad, hs.layout.maximized, nil, nil},
     {"Spotify", nil, laptop_screen, hs.layout.maximized, nil, nil}
   }
 
@@ -47,7 +47,7 @@ function layoutWindows()
     {"Obsidian", nil, primary_screen, hs.geometry.rect(0, 0, 0.333, 1), nil, nil},
     {"Firefox", nil, primary_screen, hs.geometry.rect(0.333,0,0.333, 1), nil, nil},
     {"Code", nil, primary_screen, hs.geometry.rect(0.666, 0, 0.333, 1), nil, nil},
-    {"Slack", nil, laptop_screen,  hs.layout.maximized, nil, nil}
+    {"Music", nil, laptop_screen,  hs.layout.maximized, nil, nil}
   }
 
   local desiredLayout = {}
@@ -86,3 +86,6 @@ hs.hotkey.bind(hyper, "L", launchApps)
 hs.hotkey.bind(hyper, "P", layoutWindows)
 hs.hotkey.bind(hyper, "O", toggleTermObsidian)
 hs.hotkey.bind(hyper, "W", getWeather)
+hs.hotkey.bind({}, "f1", function() hs.application.launchOrFocus("Slack")end)
+hs.hotkey.bind({}, "f2", function() hs.application.launchOrFocus("iTerm")end)
+hs.hotkey.bind({}, "f3", function() hs.application.launchOrFocus("Firefox")end)
