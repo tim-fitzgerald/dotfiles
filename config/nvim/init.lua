@@ -18,11 +18,16 @@ require('packer').startup(function(use)
 	use 'junegunn/fzf.vim'
 	use 'preservim/nerdtree'
 	use 'preservim/nerdcommenter'
+	use 'arcticicestudio/nord-vim'
 	use 'neovim/nvim-lspconfig'
 	use 'ryanoasis/vim-devicons'
 	use 'hashivim/vim-terraform'
 	use 'tpope/vim-endwise'
+	use 'tpope/vim-fugitive'
+	use 'karb94/neoscroll.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
+	use 'github/copilot.vim'
+	use 'tidalcycles/vim-tidal'
 	use {
 		'phaazon/hop.nvim',
 		branch = 'v2',
@@ -87,13 +92,32 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.autoindent = true
 vim.opt.expandtab = false
-vim.opt.encoding = 'UTF-8'
+vim.opt.encoding = 'utf-8'
 vim.api.nvim_command('filetype plugin on')
-
+vim.cmd 'colorscheme nord'
 -- Plugin Options
 vim.NERDTreeShowHidden = 1
 vim.NERDCreateDefaultMappings = 1
 
+--- Functions
+function split_line()
+    local col = vim.fn.col('.')  -- Get the cursor column
+    local line = vim.fn.line('.') -- Get the cursor line
+
+    -- Get the text before and after the cursor position
+    local line_content = vim.fn.getline(line)
+    local before_cursor = line_content:sub(1, col - 1)
+    local after_cursor = line_content:sub(col)
+
+    -- Update the original line with the text before the cursor
+    vim.fn.setline(line, before_cursor)
+
+    -- Insert a new line with the text after the cursor
+    vim.fn.append(line, after_cursor)
+end
+--
+
 --- Key Mappings
 vim.keymap.set('n', '<C-b>', ':NERDTreeToggle<CR>', {noremap = true})
 vim.keymap.set('n', '<C-f>', ':Files<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-s>', [[:lua split_line()<CR>]], { noremap = true, silent = true })
