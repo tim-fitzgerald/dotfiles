@@ -65,6 +65,7 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias gam="/Users/timfitzgerald1/bin/gamadv-xtd3/gam"
+. "$HOME/.asdf/asdf.sh"
 
 eval "$(dev _hook)"
 

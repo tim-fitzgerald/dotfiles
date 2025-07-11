@@ -13,6 +13,7 @@ alias black='python3 -m black'
 alias c="clear"
 alias cdh="cd ~"
 alias chmox='chmod +x'
+alias e='eza -la'
 alias gam="/Users/timfitzgerald/bin/gamadv-xtd3/gam"
 alias gam="~/bin/gamadv-xtd3/gam" 
 alias gamc='gcloud alpha cloud-shell ssh'
