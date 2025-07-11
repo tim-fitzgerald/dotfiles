@@ -30,3 +30,12 @@
       force: true
       path: config/nvim/init.lua
       create: true
+    ~/.config/karabiner/karabiner.json:
+      force: true
+      path: config/karabiner/karabiner.json
+      create: true
+    ~/.config/karabiner/assets/complex_modifications/1667238745.json:
+      force: true
+      path: config/karabiner/assets/complex_modifications/1667238745.json
+      create: true
+
