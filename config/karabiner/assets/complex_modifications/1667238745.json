@@ -1,0 +1,1 @@
+{"title":"Right Command to Ctrl Opt Cmd Shift","rules":[{"description":"","manipulators":[{"type":"basic","from":{"modifiers":{"optional":["right_gui"]}},"to":[{"repeat":true,"modifiers":["left_control","left_alt","left_gui","left_shift"]}]}]}]}

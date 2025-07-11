@@ -39,6 +39,10 @@ aws_profiles() {
 	export AWS_PROFILE="$(cat ~/.aws/config | fzf -f [ | sed 's/[][]//g' | sed 's/profile //g'| fzf)"
 }
 
+function devdev() {
+	export PATH=~/src/clio/dev/bin:$PATH
+}
+
 aws_profiles_2() {
 	profiles_array=()
 	while read line; do

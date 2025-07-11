@@ -5,7 +5,7 @@ hs.alert.defaultStyle.strokeColor = {white = 1, alpha = 0}
 hs.alert.defaultStyle.fillColor = {white = 0.05, alpha = 0.75}
 hs.alert.defaultStyle.radius = 10
 
-logger = hs.logger.new('debug', 'info');
+logger = hs.logger.new('debug', 'info','verbose');
 
 hyper = {"cmd", "alt", "ctrl", "shift"}
 hs.application.enableSpotlightForNameSearches(true)
@@ -47,7 +47,8 @@ function layoutWindows()
     {"Obsidian", nil, primary_screen, hs.geometry.rect(0, 0, 0.333, 1), nil, nil},
     {"Firefox", nil, primary_screen, hs.geometry.rect(0.333,0,0.333, 1), nil, nil},
     {"Code", nil, primary_screen, hs.geometry.rect(0.666, 0, 0.333, 1), nil, nil},
-    {"Music", nil, laptop_screen,  hs.layout.maximized, nil, nil}
+    {"Music", nil, laptop_screen,  hs.layout.maximized, nil, nil},
+    {"Slack", nil, laptop_screen, hs.layout.maximized, nil, nil}
   }
 
   local desiredLayout = {}
@@ -81,11 +82,23 @@ function getWeather()
 end
 --
 
+-- Audio Switcher --
+function switchToEvo()
+	hs.audiodevice.findOutputByName("EVO4"):setDefaultOutputDevice()
+end
+
+function switchToMac()
+	hs.audiodevice.findOutputByName("MacBook Pro Speakers"):setDefaultOutputDevice()
+end
+-- 
+
 -- Hotkey Assignments
 hs.hotkey.bind(hyper, "L", launchApps)
 hs.hotkey.bind(hyper, "P", layoutWindows)
 hs.hotkey.bind(hyper, "O", toggleTermObsidian)
-hs.hotkey.bind(hyper, "W", getWeather)
-hs.hotkey.bind({}, "f1", function() hs.application.launchOrFocus("Slack")end)
-hs.hotkey.bind({}, "f2", function() hs.application.launchOrFocus("iTerm")end)
-hs.hotkey.bind({}, "f3", function() hs.application.launchOrFocus("Firefox")end)
+hs.hotkey.bind(hyper, "w", function() hs.application.launchOrFocus("Slack")end)
+hs.hotkey.bind(hyper, "e", function() hs.application.launchOrFocus("iTerm")end)
+hs.hotkey.bind(hyper, "r", function() hs.application.launchOrFocus("Firefox")end)
+hs.hotkey.bind(hyper, "v", switchToEvo)
+hs.hotkey.bind(hyper, "b", switchToMac)
+

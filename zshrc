@@ -6,9 +6,9 @@ export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
 export PATH=~/.local/bin:$PATH
 export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.nodenv/versions/18.7.0/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -57,12 +57,6 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/timfitzgerald/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/timfitzgerald/google-cloud-sdk/completion.zsh.inc'; fi
-
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
@@ -72,4 +66,8 @@ fi
 
 alias gam="/Users/timfitzgerald1/bin/gamadv-xtd3/gam"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+eval "$(dev _hook)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
