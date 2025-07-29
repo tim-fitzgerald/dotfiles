@@ -25,7 +25,6 @@ require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'karb94/neoscroll.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
-	use 'github/copilot.vim'
 	use 'tidalcycles/vim-tidal'
 	use 'folke/which-key.nvim'
 	use 'nvim-tree/nvim-web-devicons'

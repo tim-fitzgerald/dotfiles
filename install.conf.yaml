@@ -22,13 +22,17 @@
       if: '[ "${CODESPACES}" = true ]'
       path: oh-my-zsh/custom/codespaces.zsh
       force: true
-    ~/.config/nvim/init.vim:
-      force: true
-      path: config/nvim/init.vim
-      create: true
     ~/.config/nvim/init.lua:
       force: true
       path: config/nvim/init.lua
+      create: true
+    ~/.config/nvim/lua/mappings.lua:
+      force: true
+      path: config/nvim/lua/mappings.lua
+      create: true
+    ~/.config/nvim/lua/which-key-config.lua:
+      force: true
+      path: config/nvim/lua/which-key-config.lua
       create: true
     ~/.config/karabiner/karabiner.json:
       force: true
@@ -38,4 +42,7 @@
       force: true
       path: config/karabiner/assets/complex_modifications/1667238745.json
       create: true
-
+    ~/.hammerspoon/init.lua:
+      force: true
+      path: init.lua
+      create: true
